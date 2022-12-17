@@ -5,4 +5,46 @@
 
 .header-container {
   width: 100%;
+  background-color: $header-cabinet-bg;
 }
+
+.header-inner-container {
+  @include flexbox-space-between;
+}
+
+.navbar-block ul {
+  @include flexbox-center;
+
+  li {
+    position: relative;
+    margin: 0 1rem;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -.3rem;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $main-bg;
+      transition: $transition;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+
+    a {
+      @include font-bold;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: $main-bg;
+    }
+  }
+}
+
