@@ -4,5 +4,84 @@
 @import '../../styles/breakpoints';
 
 .footer-container {
+  position: relative;
   width: 100%;
+  padding: 3.75rem 0 5rem;
+  background-color: $footer-bg;
+}
+
+.footer-inner-container {
+  @include flexbox-start;
+  justify-content: space-between;
+}
+
+.main-fund-link {
+  img {
+    max-width: 16rem;
+    border-radius: $btn-bd-radius;
+  }
+}
+
+.navlinks-container,
+.certificate-link {
+  margin-top: -.5rem;
+
+  a {
+    position: relative;
+    @include font-regular;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: $main-bg;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -.2rem;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $main-bg;
+      transition: $transition;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+.follow-links {
+  .cabinet-btn {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  ul {
+    @include flexbox-space-between;
+    margin-top: 2rem;
+
+    img {
+      width: 2rem;
+      margin: 0 .5rem;
+    }
+  }
+}
+
+.footer-btn-block {
+  @include fit-content;
+  margin: 0 auto;
+}
+
+.copyright-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $blocked-font;
+  }
 }

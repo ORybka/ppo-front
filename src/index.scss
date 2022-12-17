@@ -86,13 +86,14 @@ a {
 
 }
 
-.header-btn {
+.cabinet-btn {
   padding: .5rem 1rem;
   text-align: center;
   @include font-subtitle;
   color: $btn-font;
   background: $btn;
   border-radius: $btn-bd-radius;
+  cursor: pointer;
 
   &:hover {
     background-color: $btn-hover;

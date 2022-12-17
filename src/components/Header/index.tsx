@@ -1,25 +1,11 @@
 import React from 'react';
-import {Link, useLocation, useNavigate} from "react-router-dom";
-import {HeaderLink} from "../../interfaces";
+import {Link, useLocation} from "react-router-dom";
+import CabinetButton from "../buttons/CabinetButton";
+import {headerLinksArr} from '../../data/content';
 import './header.scss';
 
 function Header() {
     const {pathname} = useLocation();
-    const navigate = useNavigate();
-
-    const headerLinksArr: Array<HeaderLink> = [
-        {
-            text: 'Головна'
-        },
-        {
-            hash: '#conditions',
-            text: 'Умови'
-        },
-        {
-            hash: '#faq',
-            text: 'FAQ'
-        }
-    ];
 
     return (
         <header className='header-container'>
@@ -31,12 +17,17 @@ function Header() {
                 </div>
                 <nav className="navbar-block">
                     <ul>
+                        <li>
+                            <Link to='/'>Головна</Link>
+                        </li>
                         {headerLinksArr.map((link, i) => {
                             return (<li key={i}>
                                 <Link to={{pathname: `${pathname === '/' ? '' : '/'}`, hash: `${link.hash ? link.hash : ''}`}}>{link.text}</Link>
                             </li>)
                         })}
-                        <li className='header-btn' onClick={() => navigate('/cabinet/')}>Особистий кабінет</li>
+                        <li>
+                            <CabinetButton />
+                        </li>
                     </ul>
                 </nav>
             </div>
