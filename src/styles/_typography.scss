@@ -1,0 +1,110 @@
+@import "variables";
+@import "breakpoints";
+@import "mixin";
+
+.main-title {
+  margin-bottom: 1rem;
+  @include font-title;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 5.5rem;
+  color: $title-font;
+
+  @include laptopBreakpoint {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  @include mobileBreakpoint {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  @include smallMobileBreakpoint {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  span {
+    padding: 0 3.5rem;
+    color: $main-font;
+    background-color: $btn;
+    clip-path: $title-clip-path;
+  }
+}
+
+.main-subtitle {
+  width: 90%;
+  @include font-subtitle;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-font;
+}
+
+.title {
+  margin: 1rem 0;
+  @include font-bold;
+  font-size: 3rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: $main-font;
+
+  @include mobileBreakpoint {
+    //font-size: 1.286rem;
+    //line-height: 2.5rem;
+  }
+}
+
+.block-title {
+  @include font-bold;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  text-transform: uppercase;
+  color: $main-font;
+
+  @include mobileBreakpoint {
+    //font-size: 1.286rem;
+    //line-height: 2.5rem;
+  }
+}
+
+h4 {
+  @include font-bold;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  margin: 0 0 1rem;
+
+  @include mobileBreakpoint {
+    //width: auto;
+  }
+}
+
+p {
+  @include font-regular;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  margin: 1rem 0;
+
+  @include mobileBreakpoint {
+    //width: auto;
+  }
+}
+
+p.cabinet-paragraph {
+  @include font-subtitle-italic;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+ul {
+  @include font-regular;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  margin: 1rem 0;
+
+  @include mobileBreakpoint {
+    //width: auto;
+  }
+}
