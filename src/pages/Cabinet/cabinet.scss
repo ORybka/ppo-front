@@ -4,5 +4,42 @@
 @import '../../styles/breakpoints';
 
 .cabinet-container {
-  min-height: calc(100vh - 15rem);
+  margin-top: 2.625rem;
 }
+
+.two-side-block {
+  @include flexbox-space-between;
+
+  .cabinet-block {
+    width: 48%;
+  }
+}
+
+.cabinet-block {
+  width: 100%;
+  min-height: 34.25rem;
+  margin-bottom: 3.875rem;
+  padding: 1.25rem 1.75rem 2.25rem;
+  background: $block-bg;
+  box-shadow: $box-shadow;
+  border-radius: $block-bd-radius;
+
+  .title-container {
+    @include flexbox-start;
+
+    img {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      bottom: .3rem;
+    }
+  }
+
+  p {
+    max-width: 28rem;
+    @include font-subtitle-italic;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+

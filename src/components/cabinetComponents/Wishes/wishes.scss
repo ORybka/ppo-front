@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+@import '../../../styles/typography';
+@import '../../../styles/breakpoints';
+
+.wishes-container {
+  .content-block {
+    @include flexbox-space-between;
+  }
+
+  .main-btn {
+    margin: .3rem 0 0 1rem;
+    @include font-title;
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+}
+
+.wishes-column-container {
+  width: 32%;
+
+  h6 {
+    width: 100%;
+    padding: 0 2rem;
+    @include font-bold;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-font;
+    background-color: $highlight;
+    clip-path: $title-clip-path;
+  }
+
+  .wishes-requests {
+    height: 24.25rem;
+    border-left: 3px solid $highlight;
+  }
+}

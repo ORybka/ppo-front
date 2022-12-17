@@ -32,7 +32,7 @@ function Footer() {
                 </div>
                 <div className="follow-links">
                     <div className="footer-btn-block">
-                        <CabinetButton />
+                        <CabinetButton title={'Особистий кабінет'} />
                     </div>
                     <div className="follow-links-block">
                         <ul>
@@ -40,7 +40,7 @@ function Footer() {
                                 return (
                                     <li key={el.name}>
                                         <a href={el.link}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/${el.name}.svg`} alt={`${el.name} link`} />
+                                            <img src={`${process.env.PUBLIC_URL}/assets/images/follow-icons/${el.name}.svg`} alt={`${el.name} link`} />
                                         </a>
                                     </li>
                                 )

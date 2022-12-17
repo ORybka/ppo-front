@@ -26,7 +26,7 @@ function Header() {
                             </li>)
                         })}
                         <li>
-                            <CabinetButton />
+                            <CabinetButton title={'Особистий кабінет'} />
                         </li>
                     </ul>
                 </nav>

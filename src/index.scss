@@ -82,8 +82,20 @@ a {
 }
 
 //BUTTONS
-.btn {
+.main-btn {
+  padding: 0 1rem;
+  text-align: center;
+  @include font-subtitle;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: $btn-font;
+  background: $btn;
+  clip-path: $btn-clip-path;
 
+  &:hover {
+    background-color: $btn-hover;
+  }
 }
 
 .cabinet-btn {
@@ -104,17 +116,3 @@ a {
   }
 }
 
-//DECORATIONS
-.title-underline {
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: $highlight;
-  }
-}

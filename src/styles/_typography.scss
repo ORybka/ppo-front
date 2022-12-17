@@ -44,7 +44,7 @@
 }
 
 .title {
-  //margin: 1rem 0;
+  margin: 1rem 0;
   @include font-bold;
   font-size: 3rem;
   line-height: 4rem;
@@ -58,10 +58,12 @@
 }
 
 .block-title {
+  padding-left: 3.5rem;
+  margin-left: -3rem;
+  @include fit-content;
   @include font-bold;
   font-size: 2rem;
   line-height: 2.75rem;
-  text-transform: uppercase;
   color: $main-font;
 
   @include mobileBreakpoint {
@@ -105,5 +107,20 @@ ul {
 
   @include mobileBreakpoint {
     //width: auto;
+  }
+}
+
+//DECORATIONS
+.title-underline {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $highlight;
   }
 }
