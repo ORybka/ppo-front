@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+@import '../../../styles/typography';
+@import '../../../styles/breakpoints';
+
+.application-popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flexbox-center;
+  z-index: 10;
+}
+
+.application-popup-inner-container {
+  @include flexbox-start;
+  @include flex-direction-column;
+  width: 85%;
+  height: auto;
+  padding: 1.25rem 1.75rem 2.25rem;
+  border: 1px solid $main-font;
+  background: $block-bg;
+  box-shadow: $box-shadow;
+  border-radius: $block-bd-radius;
+}
+
+.cabinet-block .application-popup-inner-container {
+  h6 {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 2rem;
+    @include font-subtitle;
+  }
+
+  button {
+    align-self: flex-end;
+    padding: .3rem 2rem;
+  }
+}

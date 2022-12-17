@@ -4,15 +4,19 @@
 @import '../../../styles/breakpoints';
 
 .wishes-container {
+  position: relative;
+
   .content-block {
     @include flexbox-space-between;
   }
 
-  .main-btn {
-    margin: .3rem 0 0 1rem;
-    @include font-title;
-    font-size: 2.25rem;
-    line-height: 1;
+  .title-container {
+    .main-btn {
+      margin: .3rem 0 0 1rem;
+      @include font-title;
+      font-size: 2.25rem;
+      line-height: 1;
+    }
   }
 }
 

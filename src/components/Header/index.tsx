@@ -17,9 +17,6 @@ function Header() {
                 </div>
                 <nav className="navbar-block">
                     <ul>
-                        <li>
-                            <Link to='/'>Головна</Link>
-                        </li>
                         {headerLinksArr.map((link, i) => {
                             return (<li key={i}>
                                 <Link to={{pathname: `${pathname === '/' ? '' : '/'}`, hash: `${link.hash ? link.hash : ''}`}}>{link.text}</Link>

@@ -1,15 +1,8 @@
 import React, {FunctionComponent, useEffect, useState} from 'react';
-
-enum CabinetElementType {
-    form, sent, transferred
-}
-
-type CabinetElementProps = {
-    type: CabinetElementType,
-}
+import {CabinetElementProps} from '../../data/types';
 
 const WishesColumn: FunctionComponent<CabinetElementProps> = ({type}) => {
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState<string>('');
 
     useEffect(() => {
         switch(type) {
