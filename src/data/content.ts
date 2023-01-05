@@ -1,4 +1,4 @@
-import {MenuLink, FooterLink} from "../interfaces";
+import {MenuLink, FooterLink} from "./interfaces";
 
 const headerLinksArr: Array<MenuLink> = [
     {
